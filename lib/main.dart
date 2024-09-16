@@ -10,7 +10,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Screen2(),
     );
@@ -20,13 +20,21 @@ class App extends StatelessWidget {
 class Home extends StatelessWidget {
   Home({super.key});
 
-  String hello =  "Hello world! This is my first flutter app";
+  String hello = "Hello world! This is my first flutter app";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.green.shade700,
-      leading: const Icon(Icons.menu, color: Colors.white,),
-        title: const Text("title", style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
+      appBar: AppBar(
+        backgroundColor: Colors.green.shade700,
+        leading: const Icon(
+          Icons.menu,
+          color: Colors.white,
+        ),
+        title: const Text(
+          "title",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+        ),
         actions: [
           const Icon(Icons.home),
           const Icon(Icons.search),
@@ -35,7 +43,6 @@ class Home extends StatelessWidget {
           const Icon(Icons.person),
           const Icon(Icons.add_circle),
           const Icon(Icons.add),
-
         ],
       ),
       body: SingleChildScrollView(
@@ -63,31 +70,37 @@ class Home extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.green.shade900,
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
-                    border: Border.all(color: Colors.red, width: 4)
-                ),
+                    border: Border.all(color: Colors.red, width: 4)),
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 height: 100,
                 width: double.infinity,
-
                 margin: const EdgeInsets.all(20),
-
                 child: Center(
                   child: Text(
                     hello,
-
-
-                    style: const TextStyle(color: Colors.white, ),
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-
               ),
-              const Icon(Icons.add_circle, color: Colors.blue,size: 100,),
-              ClipOval(child: Image.network("https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/455890343_999955728807433_6785008603388102544_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Hxq16cDDjC0Q7kNvgFz4YOx&_nc_ht=scontent.fdac22-1.fna&_nc_gid=A50nPVTkEu2b4h4QUonGRvD&oh=00_AYCKI0xT5pzwDc5AVG5Nsqzn-vGmmH7di9bx8zxfze0MCA&oe=66EE1F38",height: 200,)),
+              const Icon(
+                Icons.add_circle,
+                color: Colors.blue,
+                size: 100,
+              ),
+              ClipOval(
+                  child: Image.network(
+                "https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/455890343_999955728807433_6785008603388102544_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Hxq16cDDjC0Q7kNvgFz4YOx&_nc_ht=scontent.fdac22-1.fna&_nc_gid=A50nPVTkEu2b4h4QUonGRvD&oh=00_AYCKI0xT5pzwDc5AVG5Nsqzn-vGmmH7di9bx8zxfze0MCA&oe=66EE1F38",
+                height: 200,
+              )),
               ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  child: Image.network("https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/455890343_999955728807433_6785008603388102544_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Hxq16cDDjC0Q7kNvgFz4YOx&_nc_ht=scontent.fdac22-1.fna&_nc_gid=A50nPVTkEu2b4h4QUonGRvD&oh=00_AYCKI0xT5pzwDc5AVG5Nsqzn-vGmmH7di9bx8zxfze0MCA&oe=66EE1F38",height: 200,)),
-            // Image.asset("asset/as.jpg",height: 100)
-
+                  child: Image.network(
+                    "https://scontent.fdac22-1.fna.fbcdn.net/v/t39.30808-6/455890343_999955728807433_6785008603388102544_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Hxq16cDDjC0Q7kNvgFz4YOx&_nc_ht=scontent.fdac22-1.fna&_nc_gid=A50nPVTkEu2b4h4QUonGRvD&oh=00_AYCKI0xT5pzwDc5AVG5Nsqzn-vGmmH7di9bx8zxfze0MCA&oe=66EE1F38",
+                    height: 200,
+                  )),
+              // Image.asset("asset/as.jpg",height: 100)
             ],
           ),
         ),
